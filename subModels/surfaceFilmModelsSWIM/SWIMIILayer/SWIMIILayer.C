@@ -539,15 +539,6 @@ SWIMIILayer::SWIMIILayer
         dimensionedScalar(dimMass/dimTime/dimArea, Zero)
     )
 {
-    if (coeffs().readIfPresent("Tmin", Tmin_))
-    {
-        Info<< "    limiting minimum temperature to " << Tmin_ << endl;
-    }
-
-    if (coeffs().readIfPresent("Tmax", Tmax_))
-    {
-        Info<< "    limiting maximum temperature to " << Tmax_ << endl;
-    }
 
     if (thermo_.hasMultiComponentCarrier())
     {

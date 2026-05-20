@@ -101,8 +101,15 @@ inline tmp<volScalarField> SWIMIILayer::T
         )
     );
 
-    tT.ref().min(Tmax_);
-    tT.ref().max(Tmin_);
+    if (withTbounds_ & limitType::CLAMP_MIN)
+    {
+        tT.ref().clamp_min(Tbounds_.min());
+    }
+
+    if (withTbounds_ & limitType::CLAMP_MAX)
+    {
+        tT.ref().clamp_max(Tbounds_.max());
+    }
 
     return tT;
 }
