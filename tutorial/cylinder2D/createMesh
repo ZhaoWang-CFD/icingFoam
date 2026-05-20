@@ -1,0 +1,14 @@
+#!/bin/sh
+cd ${0%/*} || exit 1
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+
+rm -f log.*
+rm -rf constant/polyMesh
+rm -rf constant/wallFilmRegion/polyMesh
+
+cp -r constant/polyMesh.ori constant/polyMesh
+
+runApplication topoSet
+runApplication extrudeToRegionMesh -overwrite
+
+#------------------------------------------------------------------------------

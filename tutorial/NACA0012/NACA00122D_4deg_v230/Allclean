@@ -5,6 +5,9 @@ cd ${0%/*} || exit 1    # Run from this directory
 
 cleanTimeDirectories
 rm -rf postProcessing
+rm -r processor*
 rm -f log.*
+rm -rf constant/polyMesh
+rm -rf constant/wallFilmRegion/polyMesh
 
 #------------------------------------------------------------------------------
