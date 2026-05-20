@@ -1,6 +1,6 @@
 EXE_INC = \
     -I. \
-    -I../iceFoam \
+    -I../icingFoam \
     -I$(LIB_SRC)/finiteVolume/lnInclude \
     -I$(LIB_SRC)/sampling/lnInclude \
     -I$(LIB_SRC)/meshTools/lnInclude \
@@ -16,7 +16,10 @@ EXE_INC = \
     -I$(LIB_SRC)/thermophysicalModels/SLGThermo/lnInclude \
     -I$(LIB_SRC)/thermophysicalModels/chemistryModel/lnInclude \
     -I$(LIB_SRC)/thermophysicalModels/radiation/lnInclude \
+    -I$(LIB_SRC)/finiteArea/lnInclude \
     -I$(LIB_SRC)/regionModels/regionModel/lnInclude \
+    -I$(LIB_SRC)/regionFaModels/lnInclude \
+    -I$(LIB_SRC)/faOptions/lnInclude \
     -I$(LIB_SRC)/regionModels/surfaceFilmModels/lnInclude \
     -I$(LIB_SRC)/lagrangian/basic/lnInclude \
     -I$(LIB_SRC)/lagrangian/intermediate/lnInclude \
@@ -38,7 +41,10 @@ EXE_LIBS = \
     -lreactionThermophysicalModels \
     -lSLGThermo \
     -lchemistryModel \
+    -lfiniteArea \
     -lregionModels \
+    -lregionFaModels \
+    -lfaOptions \
     -lradiationModels \
     -lsurfaceFilmModelsSWIM \
     -lsurfaceFilmDerivedFvPatchFields \

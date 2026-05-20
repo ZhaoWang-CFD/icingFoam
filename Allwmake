@@ -2,9 +2,10 @@
 cd ${0%/*} || exit 1    # run from this directory
 set -x
 
-cd iceFoam
+
+cd subModels/surfaceFilmModelsSWIM
 wmake
-cd ../subModels/surfaceFilmModelsSWIM
+cd ../../icingFoam
 wmake
 
 # ----------------------------------------------------------------- end-of-file

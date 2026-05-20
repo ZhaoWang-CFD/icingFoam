@@ -1,0 +1,8 @@
+
+# OpenFOAM generated build outputs
+**/Make/linux*/
+**/lnInclude/
+platforms/
+log.*
+*.o
+*.dep
