@@ -6,4 +6,4 @@ accretion simulation based on OpenFOAM.
 
 ## Project status
 
-This repository is under active development.
+This project has been updated for OpenFOAM v2512.
