@@ -5,7 +5,9 @@ set -x
 
 cd subModels/surfaceFilmModelsSWIM
 wmake
-cd ../../icingFoam
+cd ../../solvers/icingFoam
+wmake
+cd ../faIcingFoam
 wmake
 
 # ----------------------------------------------------------------- end-of-file

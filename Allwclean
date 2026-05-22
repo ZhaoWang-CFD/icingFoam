@@ -2,10 +2,11 @@
 cd ${0%/*} || exit 1    # run from this directory
 set -x
 
-cd icingFoam
+cd subModels/surfaceFilmModelsSWIM
 wclean
-cd ../subModels/surfaceFilmModelsSWIM
+cd ../solvers/icingFoam
 wclean
-
+cd ../faIcingFoam
+wclean
 
 # ----------------------------------------------------------------- end-of-file

@@ -1,0 +1,13 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # Run from this directory
+
+# Clean time directories only
+
+cleanTimeDirectories
+rm -rf postProcessing
+rm -r processor*
+rm -f log.*
+rm -rf constant/polyMesh
+rm -rf constant/wallFilmRegion/polyMesh
+
+#------------------------------------------------------------------------------
